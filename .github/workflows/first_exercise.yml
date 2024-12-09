@@ -12,6 +12,4 @@ jobs:
       - name: Check out repo code
         uses: actions/checkout@v3
 
-      - run: |
-          echo "Content of hello_world.txt:"
-          cat "$(cat hello_world.txt)"
+      - run: "$(cat hello_world.txt)"
