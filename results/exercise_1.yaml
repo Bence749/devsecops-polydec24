@@ -1,0 +1,15 @@
+name: first_exercise
+
+on: push
+
+jobs:
+  first_exercise_job:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Check out repo code
+        uses: actions/checkout@v3
+
+      - name: Print hello_world.txt content
+        run: |
+          echo "Content of hello_world.txt:"
+          cat "$(cat hello_world.txt)"
