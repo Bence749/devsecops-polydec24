@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Enable package-lock config
+        run: npm config set package-lock=true
       - name: Create .package file
         run: npm init -y
       - name: Create lock file
