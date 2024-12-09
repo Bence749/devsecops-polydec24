@@ -3,7 +3,23 @@ name: second-exercise
 on: push
 
 jobs: 
+  SCA:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Check vulnerabilities
+        run: npm audit
+      - name: Fix vulnerabilities
+        run: npm audit fix --force
+      - name: Verify fix
+        run: npm audit --audit-level=moderate
+  
+
   build:
+    needs: SCA
+  
     runs-on: ubuntu-latest
 
     steps: 
