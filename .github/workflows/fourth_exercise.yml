@@ -1,9 +1,9 @@
-name: Bearer SAST
+name: Fourth exercise
 
 on: push
 
 jobs:
-  earer-scan:
+  bearer-scan:
     name: Bearer SAST Scan
     runs-on: ubuntu-latest
     steps:
