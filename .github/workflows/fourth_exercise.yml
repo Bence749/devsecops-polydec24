@@ -10,8 +10,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Uses Bearer 
+      - name: Scan with Bearer 
         uses: bearer/bearer-action@v2
-
-      - name: Run scan
-        run: bearer scan juice-shop
