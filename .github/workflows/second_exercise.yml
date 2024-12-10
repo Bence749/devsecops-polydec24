@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Initialize npm 
         run: npm init -y
+      - name: Create lockfile
+        run: npm i --package-lock-only
       - name: Check vulnerabilities
         run: npm audit
   
