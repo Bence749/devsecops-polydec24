@@ -15,6 +15,10 @@ jobs:
         run: npm i --package-lock-only
       - name: Check vulnerabilities
         run: npm audit
+      - name: Fix vulnerabilities
+        run: npm audit fix --force
+      - name: Verify fix
+        run: npm audit --audit-level=moderate
   
 
   build:
